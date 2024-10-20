@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Alerts for {{ city }}</title>
+  </head>
+  <body>
+    <h1>Weather Alerts for {{ city }}</h1>
+    <ul>
+      {% for alert in alerts %}
+      <li>{{ alert[1] }} (Triggered on {{ alert[2] }})</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

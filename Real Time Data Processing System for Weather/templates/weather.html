@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Data for {{ city }}</title>
+  </head>
+  <body>
+    <h1>Real-Time Weather Data for {{ city }}</h1>
+    <ul>
+      <li>Temperature: {{ temperature }}°C</li>
+      <li>Feels Like: {{ feels_like }}°C</li>
+      <li>Weather Condition: {{ weather_condition }}</li>
+      <li>Last Updated: {{ timestamp }}</li>
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Dashboard</a>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Monitoring Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Weather Monitoring Dashboard</h1>
+    <p>
+      Select a city to view real-time weather data, daily summaries, and alerts:
+    </p>
+    <ul>
+      <li>
+        <a href="{{ url_for('weather', city='Delhi') }}"
+          >Weather Data for Delhi</a
+        >
+      </li>
+      <li>
+        <a href="{{ url_for('summary', city='Delhi') }}"
+          >Daily Summary for Delhi</a
+        >
+      </li>
+      <li>
+        <a href="{{ url_for('alerts', city='Delhi') }}">Alerts for Delhi</a>
+      </li>
+      <li>
+        <a href="{{ url_for('visualize', city='Delhi') }}"
+          >Temperature Trends for Delhi</a
+        >
+      </li>
+      <!-- Repeat for other cities like Mumbai, Chennai, etc. -->
+    </ul>
+  </body>
+</html>
